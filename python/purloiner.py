@@ -87,7 +87,6 @@ def main() -> None:
     if os.path.isfile(args.out_file):
         question = f'Output file "{args.out_file}" exists. Overwrite? [yN] '
         answer = input(question)
-        print('answer', answer)
         if not answer.lower().startswith('y'):
             sys.exit('Bye!')
 
@@ -96,7 +95,6 @@ def main() -> None:
 
     while True:
         column = column_select(columns)
-        print(column)
         if column is None:
             break
 
