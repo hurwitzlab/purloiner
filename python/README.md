@@ -327,6 +327,25 @@ Pick the term you wish to associate, e.g., "1" for "acidity of water (ENVO_31000
 Repeat the column/term association step for as many columns in the input file as you like.
 Choose the "Exit" option from the column selection menu to write the output file.
 
+## Editing an existing association file
+
+It is expected that a user would want to edit an existing column/assocation file.
+To do so using the "osd_sample_ontology.tsv" we created above and assuming we'll want to overwrite it (otherwise give it a different `--outfile`):
+
+```
+$ ./purloiner.py -f osd_sample.tsv -o pmo_searchable_terms.tsv -a osd_sample_ontology.tsv
+Output file "osd_sample_ontology.tsv" exists. Overwrite? [yN] y
+```
+
+Now you can see, for instance, that the column "pH" shows that it is currently associated to the term "ENVO_3100030":
+
+```
+  │   51 - pH => "ENVO_3100030" (acidity of water)                          │
+```
+
+Choose "51" if you wish to change this.
+As before, when you are done creating the associations, "Exit" from the first (column) menu to write the output file.
+
 ## Creating a data package
 
 Once you have the column/ontology association file, you can create a Frictionless Datapackage.
