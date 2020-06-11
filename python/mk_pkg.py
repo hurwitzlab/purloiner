@@ -104,9 +104,9 @@ def main() -> None:
             if data_format:
                 field['format'] = data_format
 
-            rdf_type = ont.get('rdftype', field.get('rdftype'))
+            rdf_type = ont.get('rdf type purl', field.get('rdfType'))
             if rdf_type:
-                field['rdftype'] = rdf_type
+                field['rdfType'] = rdf_type
 
             units = ont.get('units purl', field.get('pm:unitRdfType'))
             if units:
@@ -126,9 +126,10 @@ def main() -> None:
             if measure_url:
                 field['pm:measurementSourceProtocolUrl'] = measure_url
 
-            is_searchable = ont.get('pm:searchable', field.get('pm:searchable'))
-            if is_searchable:
-                field['pm:searchable'] = is_searchable
+            # TODO: Not sure about this
+            # is_searchable = ont.get('pm:searchable', field.get('pm:searchable'))
+            # if is_searchable:
+            #     field['pm:searchable'] = is_searchable
 
         package.remove_resource(res.name)
         package.add_resource(res.descriptor)
