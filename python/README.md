@@ -7,7 +7,7 @@ This is a first pass writing a program to annotate an marine dataset with ontolo
 Given a data set like [OSD](https://github.com/hurwitzlab/planet-microbe-datapackages/blob/master/OSD/osd_sample.tsv):
 
 ```
-]$ csvchk osd_sample.tsv
+$ csvchk osd_sample.tsv
 // ****** Record 1 ****** //
 Sample ID                    : OSD186_2014-06-21_2.4m_NPL022
 Sample label (BioSample)     : SAMEA3275469
